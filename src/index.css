@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  @apply w-full h-full;
+  @apply text-gray-800 bg-white;
+  @apply dark:text-gray-200 dark:bg-zinc-900;
+  @apply font-medium;
+}
