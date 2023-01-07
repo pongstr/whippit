@@ -4,16 +4,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Poppins', 'sans-serif'],
       mono: ['Consolas', 'Menlo', 'Monaco', 'monospace'],
     },
-    extend: {
-      colors: {
-        header: '#18181B',
-        aside: '#19191B',
-        main: '#1C1C1F',
-      },
-    },
+    extend: {},
   },
   plugins: [
     require('@tailwindcss/typography'),
