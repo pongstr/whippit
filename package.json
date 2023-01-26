@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "format": "prettier --write ./src",
     "lint": "eslint --max-warnings=0 ./src",
     "dev": "vite --host --port 9001",
     "build": "tsc && vite build",
+    "prettier": "./node_modules/.bin/prettier --write ./src",
     "preview": "vite preview",
-    "prettier": "./node_modules/.bin/prettier --write ."
+    "prepare": "husky install",
+    "changelog": "npx changeset"
   },
   "dependencies": {
     "@heroicons/react": "2.0.13",
@@ -24,6 +25,7 @@
     "@babel/core": "^7.0.0-0",
     "@babel/plugin-syntax-flow": "^7.14.5",
     "@babel/plugin-transform-react-jsx": "^7.19.0",
+    "@changesets/cli": "^2.26.0",
     "@jridgewell/sourcemap-codec": "^1.4.14",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.2",
@@ -38,6 +40,7 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "gh-pages": "^4.0.0",
+    "husky": "^8.0.3",
     "postcss": ">=8.2.9 <9.0.0",
     "postcss-nesting": "^10.2.0",
     "prettier": "^2.8.1",
