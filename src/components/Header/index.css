@@ -17,34 +17,26 @@ button {
 }
 
 .SwitchRoot {
-  width: 42px;
-  height: 25px;
-  background-color: var(--blackA9);
-  border-radius: 9999px;
-  position: relative;
-  box-shadow: 0 2px 10px var(--blackA7);
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @apply relative bg-black dark:bg-zinc-900 rounded-full p-1 shadow-inner;
+  @apply focus:outline focus:outline-offset-2 focus:outline-2 dark:focus:outline-indigo-400 focus:outline-indigo-600;
+  width: 48px;
+  height: 22px;
 }
-.SwitchRoot:focus {
-  box-shadow: 0 0 0 2px black;
-}
+
 .SwitchRoot[data-state='checked'] {
-  background-color: black;
+  @apply bg-zinc-900 shadow-inner;
+}
+
+.SwitchThumb[data-state='checked'] {
+  transform: translateX(25px);
 }
 
 .SwitchThumb {
-  display: block;
-  width: 21px;
-  height: 21px;
-  background-color: white;
-  border-radius: 9999px;
-  box-shadow: 0 2px 2px var(--blackA7);
-  transition: transform 100ms;
-  transform: translateX(2px);
-  will-change: transform;
-}
-.SwitchThumb[data-state='checked'] {
-  transform: translateX(19px);
+  @apply block bg-white rounded-full shadow transition-transform will-change-transform;
+  @apply dark:bg-indigo-400 dark:hover:bg-indigo-600 transition-colors;
+  width: 22px;
+  height: 22px;
+  transform: translateX(0);
 }
 
 .Label {
