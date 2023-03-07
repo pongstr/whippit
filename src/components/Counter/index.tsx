@@ -13,9 +13,9 @@ type ButtonCounterPropType = {
 const ButtonCounter = React.memo((opt: ButtonCounterPropType) => (
   <button onClick={opt.fn} disabled={opt.disabled ?? false}>
     {opt.text === 'decrement' ? (
-      <MinusCircleIcon className="w-8 h-8" />
+      <MinusCircleIcon className="h-8 w-8" />
     ) : (
-      <PlusCircleIcon className="w-8 h-8" />
+      <PlusCircleIcon className="h-8 w-8" />
     )}
     <span className="sr-only">{opt.text}</span>
   </button>

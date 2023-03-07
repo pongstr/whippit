@@ -13,6 +13,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:tailwindcss/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -36,6 +37,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/display-name': 'off',
     'react/no-unknown-property': 'off',
+    'tailwindcss/no-custom-classname': 'off',
   },
   ignorePatterns: ['*.cjs'],
   settings: {
@@ -43,4 +45,10 @@ module.exports = {
       version: 'detect',
     },
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx', '*.js'],
+      parser: '@typescript-eslint/parser',
+    },
+  ],
 }

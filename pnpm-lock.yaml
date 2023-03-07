@@ -22,6 +22,7 @@ specifiers:
   eslint-config-react-app: ^7.0.1
   eslint-plugin-react: ^7.32.1
   eslint-plugin-react-hooks: ^4.6.0
+  eslint-plugin-tailwindcss: ^3.10.1
   gh-pages: ^4.0.0
   husky: ^8.0.3
   postcss: ^8.4.21
@@ -61,6 +62,7 @@ devDependencies:
   eslint-config-react-app: 7.0.1_ft47b7iktefkvxvdeyuvnmlnym
   eslint-plugin-react: 7.32.1_eslint@8.32.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.32.0
+  eslint-plugin-tailwindcss: 3.10.1_tailwindcss@3.2.4
   gh-pages: 4.0.0
   husky: 8.0.3
   postcss: 8.4.21
@@ -3543,6 +3545,17 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.8
+    dev: true
+
+  /eslint-plugin-tailwindcss/3.10.1_tailwindcss@3.2.4:
+    resolution: {integrity: sha512-NLPZ6b6nd/8CgGNMQ6NDiPUfBLQpSGu/u9RyX3MCZOwzNs2dFt1OamNAiRuo3Ixh7Gv4t5UcAcdNt8z74UDJkA==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      tailwindcss: ^3.2.2
+    dependencies:
+      fast-glob: 3.2.12
+      postcss: 8.4.21
+      tailwindcss: 3.2.4_postcss@8.4.21
     dev: true
 
   /eslint-plugin-testing-library/5.10.0_7uibuqfxkfaozanbtbziikiqje:
