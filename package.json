@@ -7,7 +7,7 @@
     "lint": "eslint --max-warnings=0 ./src",
     "dev": "vite --host --port 9001",
     "build": "tsc && vite build",
-    "prettier": "./node_modules/.bin/prettier --write ./src",
+    "format": "pnpm prettier --write ./src",
     "preview": "vite preview",
     "prepare": "husky install",
     "changelog": "npx changeset"
@@ -39,6 +39,7 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-tailwindcss": "^3.10.1",
     "gh-pages": "^4.0.0",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",

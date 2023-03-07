@@ -33,9 +33,9 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <div className="flex justify-start items-center">
+      <div className="flex items-center justify-start">
         <svg
-          className="w-9 h-9 inline-block"
+          className="inline-block h-9 w-9"
           viewBox="0 0 312 247"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
           />
         </svg>
 
-        <h1 className="text-2xl font-bold tracking-tighter indent-2">
+        <h1 className="indent-2 text-2xl font-bold tracking-tighter">
           <a href="/">Prototypr</a>
         </h1>
       </div>
