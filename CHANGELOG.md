@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.1.1
+
+### Patch Changes
+
+- d55bd6a: Upgrade Dependencies
+
 ## 1.1.0
 
 ### Minor Changes
