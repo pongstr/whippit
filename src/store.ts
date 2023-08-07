@@ -1,40 +1,24 @@
-import { observable } from '@legendapp/state'
-import { enableLegendStateReact } from '@legendapp/state/react'
-import { ObservablePersistIndexedDB } from '@legendapp/state/persist-plugins/indexeddb'
-import {
-  configureObservablePersistence,
-  persistObservable,
-} from '@legendapp/state/persist'
+import { create } from 'zustand'
+
+type StoreSetterType<T> = (value: T) => void
 
 export type AppSettingsType = {
   theme: 'light' | 'dark'
+  setTheme: StoreSetterType<'light' | 'dark'>
+
   counter: number
+  setCounter: StoreSetterType<number>
 }
 
-export const TODO_SETTINGS = 'todo.settings'
-export const TODO_LIST = 'todo.collection'
+export const APP_SETTINGS = 'app.settings'
+export const APP_COLLECTION = 'app.collection'
 
-enableLegendStateReact()
-configureObservablePersistence({
-  persistLocal: ObservablePersistIndexedDB,
-  persistLocalOptions: {
-    indexedDB: {
-      databaseName: 'pongstr',
-      version: 1,
-      tableNames: [TODO_LIST, TODO_SETTINGS],
-    },
-  },
-})
-
-export const settings$ = observable<AppSettingsType>({
+export const useSettings = create<AppSettingsType>()((set) => ({
   theme: 'light',
+  setTheme: (value: AppSettingsType['theme']) =>
+    set((state) => ({ ...state, theme: value })),
+
   counter: 0,
-})
-persistObservable(settings$, {
-  local: {
-    name: TODO_SETTINGS,
-    indexedDB: {
-      itemID: TODO_SETTINGS,
-    },
-  },
-})
+  setCounter: (value: AppSettingsType['counter']) =>
+    set((state) => ({ ...state, counter: value })),
+}))

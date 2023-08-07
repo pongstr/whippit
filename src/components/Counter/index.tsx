@@ -1,7 +1,6 @@
 import React from 'react'
 import { MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
-import { useSelector } from '@legendapp/state/react'
-import { settings$ } from '@/store'
+import { useSettings } from '@/store'
 import './style.css'
 
 type ButtonCounterPropType = {
@@ -22,30 +21,34 @@ const ButtonCounter = React.memo((opt: ButtonCounterPropType) => (
 ))
 
 const Counter: React.FC = () => {
-  const counter = useSelector(() => settings$.get().counter)
+  const settings = useSettings()
 
   const increment = React.useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
       e.preventDefault()
-      settings$.counter.set(settings$.get().counter + 1)
+      settings.setCounter(settings.counter + 1)
     },
-    [],
+    [settings],
   )
 
   const decrement = React.useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
       e.preventDefault()
-      settings$.counter.set(settings$.get().counter - 1)
+      settings.setCounter(settings.counter + 1)
     },
-    [],
+    [settings],
   )
 
   return (
     <div className="counter-container">
-      <ButtonCounter fn={decrement} text="decrement" disabled={counter === 0} />
+      <ButtonCounter
+        fn={decrement}
+        text="decrement"
+        disabled={settings.counter === 0}
+      />
 
       <div className="counter-value">
-        <span>{counter}</span>
+        <span>{settings.counter}</span>
       </div>
 
       <ButtonCounter fn={increment} text="increment" />

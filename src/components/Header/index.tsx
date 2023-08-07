@@ -1,35 +1,35 @@
 import React from 'react'
 import * as Switch from '@radix-ui/react-switch'
-import { settings$ } from '@/store'
+import { useSettings } from '@/store'
 import './index.css'
-import { useSelector } from '@legendapp/state/react'
 
 const Header: React.FC = () => {
-  const theme = useSelector(() => settings$.get().theme)
+  const settings = useSettings()
+
   const isEnabled = React.useMemo(
-    (): boolean => (theme === 'light' ? true : false),
-    [theme],
+    (): boolean => (settings.theme === 'light' ? true : false),
+    [settings],
   )
 
   const handleOnChange = React.useCallback(() => {
-    if (theme === 'light') {
-      settings$.theme.set('dark')
+    if (settings.theme === 'light') {
+      settings.setTheme('dark')
       return
     }
 
-    if (theme === 'dark') {
-      settings$.theme.set('light')
+    if (settings.theme === 'dark') {
+      settings.setTheme('light')
     }
-  }, [theme])
+  }, [settings])
 
   React.useEffect(() => {
-    if (theme === 'dark') {
+    if (settings.theme === 'dark') {
       document.documentElement.classList.add('dark')
       return
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [theme])
+  }, [settings])
 
   return (
     <header>
