@@ -30,11 +30,14 @@ export const settings$ = observable<AppSettingsType>({
   theme: 'light',
   counter: 0,
 })
-persistObservable(settings$, {
-  local: {
-    name: TODO_SETTINGS,
-    indexedDB: {
-      itemID: TODO_SETTINGS,
+
+if (process.env.NODE_ENV !== 'test') {
+  persistObservable(settings$, {
+    local: {
+      name: TODO_SETTINGS,
+      indexedDB: {
+        itemID: TODO_SETTINGS,
+      },
     },
-  },
-})
+  })
+}
