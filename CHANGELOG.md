@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.2.0
+
+### Minor Changes
+
+- dcdc2fd: added vitest+react-testing-library
+
 ## 1.1.1
 
 ### Patch Changes
