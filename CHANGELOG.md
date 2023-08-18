@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.2.1
+
+### Patch Changes
+
+- 7af0ec1: update legendstate version
+
 ## 1.2.0
 
 ### Minor Changes
