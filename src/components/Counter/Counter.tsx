@@ -9,18 +9,26 @@ type ButtonCounterPropType = {
   text: 'increment' | 'decrement'
 }
 
-const ButtonCounter = React.memo((opt: ButtonCounterPropType) => (
-  <button onClick={opt.fn} disabled={opt.disabled ?? false}>
-    {opt.text === 'decrement' ? (
+const ButtonCounter: React.FC<ButtonCounterPropType> = ({
+  disabled = false,
+  text,
+  fn,
+}) => (
+  <button
+    onClick={fn}
+    disabled={disabled ?? false}
+    data-testid={`button-${text}`}
+  >
+    {text === 'decrement' ? (
       <MinusCircleIcon className="h-8 w-8" />
     ) : (
       <PlusCircleIcon className="h-8 w-8" />
     )}
-    <span className="sr-only">{opt.text}</span>
+    <span className="sr-only">{text}</span>
   </button>
-))
+)
 
-const Counter: React.FC = () => {
+export const Counter: React.FC = () => {
   const settings = useSettings()
 
   const increment = React.useCallback(
@@ -34,7 +42,7 @@ const Counter: React.FC = () => {
   const decrement = React.useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
       e.preventDefault()
-      settings.setCounter(settings.counter + 1)
+      settings.setCounter(settings.counter - 1)
     },
     [settings],
   )
@@ -48,12 +56,10 @@ const Counter: React.FC = () => {
       />
 
       <div className="counter-value">
-        <span>{settings.counter}</span>
+        <span data-testid="counter-value">{settings.counter}</span>
       </div>
 
       <ButtonCounter fn={increment} text="increment" />
     </div>
   )
 }
-
-export default Counter

@@ -3,7 +3,7 @@ import * as Switch from '@radix-ui/react-switch'
 import { useSettings } from '@/store'
 import './index.css'
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const settings = useSettings()
 
   const isEnabled = React.useMemo(
@@ -52,13 +52,17 @@ const Header: React.FC = () => {
       </div>
       <div>
         <form>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div
+            data-testid="theme-switch-container"
+            data-theme={settings.theme}
+            style={{ display: 'flex', alignItems: 'center' }}
+          >
             <label className="sr-only" htmlFor="airplane-mode">
               Theme
             </label>
             <Switch.Root
               className="SwitchRoot"
-              id="airplane-mode"
+              data-testid="theme-switcher"
               checked={isEnabled}
               onCheckedChange={handleOnChange}
             >
@@ -70,5 +74,3 @@ const Header: React.FC = () => {
     </header>
   )
 }
-
-export default Header
