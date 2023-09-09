@@ -1,7 +1,7 @@
 {
   "name": "@pongstr/whippit",
   "private": true,
-  "version": "1.2.1",
+  "version": "1.2.2",
   "type": "module",
   "scripts": {
     "lint": "eslint --max-warnings=0 ./src",
