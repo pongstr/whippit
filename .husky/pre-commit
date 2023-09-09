@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm format
-pnpm lint
-pnpm test run
+bun run format
+bun run lint
+bun run test run

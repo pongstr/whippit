@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - bun
 
 jobs:
   cache-and-install:
@@ -18,18 +18,14 @@ jobs:
         with:
           version: 16.x
 
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install dependencies + run pre-release checks
         run: |
-          pnpm install
-          pnpm lint
-          pnpm test run
+          bun install
+          bun run lint
+          bun run test run
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
