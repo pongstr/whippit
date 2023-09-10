@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.2.2
+
+### Patch Changes
+
+- 05ec3ec: update version packages
+
 ## 1.2.1
 
 ### Patch Changes
