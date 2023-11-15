@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.2.3
+
+### Patch Changes
+
+- 1a1ba63: updated dependency versions
+
 ## 1.2.2
 
 ### Patch Changes
