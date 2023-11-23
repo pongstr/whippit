@@ -15,13 +15,19 @@
     "test:ui": "NODE_ENV=test vitest --ui"
   },
   "dependencies": {
-    "@heroicons/react": "2.0.18",
-    "@legendapp/state": "^1.11.3",
-    "@radix-ui/react-popover": "^1.0.7",
+    "@legendapp/state": "^2.1.3",
+    "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.5",
+    "lucide-react": "^0.292.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "short-uuid": "^4.2.2"
+    "react-router-dom": "^6.19.0",
+    "short-uuid": "^4.2.2",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
@@ -44,6 +50,7 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "gh-pages": "^5.0.0",
     "husky": "^8.0.3",

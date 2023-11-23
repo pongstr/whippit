@@ -1,8 +1,9 @@
-import React from 'react'
-import { MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
 import { useSelector } from '@legendapp/state/react'
+import { Minus, Plus } from 'lucide-react'
+import React from 'react'
+
+import { Button } from '@/components/ui/button'
 import { settings$ } from '@/store'
-import './style.css'
 
 type ButtonCounterPropType = {
   fn: (e: React.FormEvent<HTMLButtonElement>) => void
@@ -15,18 +16,20 @@ const ButtonCounter: React.FC<ButtonCounterPropType> = ({
   text,
   fn,
 }) => (
-  <button
+  <Button
+    className="m-0"
+    variant="outline"
     onClick={fn}
     disabled={disabled ?? false}
     data-testid={`button-${text}`}
   >
     {text === 'decrement' ? (
-      <MinusCircleIcon className="h-8 w-8" />
+      <Minus className="h-5 w-5" />
     ) : (
-      <PlusCircleIcon className="h-8 w-8" />
+      <Plus className="h-5 w-5" />
     )}
     <span className="sr-only">{text}</span>
-  </button>
+  </Button>
 )
 
 export const Counter: React.FC = () => {
@@ -49,13 +52,11 @@ export const Counter: React.FC = () => {
   )
 
   return (
-    <div className="counter-container">
+    <div className="inline-flex items-stretch justify-between gap-1 rounded-xl border p-1">
       <ButtonCounter fn={decrement} text="decrement" disabled={counter === 0} />
-
-      <div className="counter-value">
+      <div className="flex w-20 items-center justify-center rounded-lg border">
         <span data-testid="counter-value">{counter}</span>
       </div>
-
       <ButtonCounter fn={increment} text="increment" />
     </div>
   )
