@@ -1,5 +1,17 @@
 # @pongstr/whippit
 
+## 1.3.0
+
+### Minor Changes
+
+- 36e00d4: Use Shadcn Components
+- 9125e5b: Use ShadcnUI, upgrade deps
+- 9125e5b: ShadcnUI + update dependencies
+
+### Patch Changes
+
+- 9125e5b: fix packages
+
 ## 1.2.3
 
 ### Patch Changes
