@@ -52,9 +52,9 @@ export const Counter: React.FC = () => {
   )
 
   return (
-    <div className="inline-flex items-stretch justify-between gap-1 rounded-xl border p-1">
+    <div className="inline-flex items-stretch justify-between gap-1 rounded-xl border bg-muted p-1">
       <ButtonCounter fn={decrement} text="decrement" disabled={counter === 0} />
-      <div className="flex w-20 items-center justify-center rounded-lg border">
+      <div className="flex w-20 select-none items-center justify-center rounded border bg-background">
         <span data-testid="counter-value">{counter}</span>
       </div>
       <ButtonCounter fn={increment} text="increment" />
