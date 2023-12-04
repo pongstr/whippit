@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.4.0
+
+### Minor Changes
+
+- 31bb4b4: Upgrade to Vite v5
+
 ## 1.3.0
 
 ### Minor Changes
