@@ -24,9 +24,9 @@ const ButtonCounter: React.FC<ButtonCounterPropType> = ({
     data-testid={`button-${text}`}
   >
     {text === 'decrement' ? (
-      <Minus className="h-5 w-5" />
+      <Minus className="size-5" />
     ) : (
-      <Plus className="h-5 w-5" />
+      <Plus className="size-5" />
     )}
     <span className="sr-only">{text}</span>
   </Button>

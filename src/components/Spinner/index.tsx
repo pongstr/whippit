@@ -12,7 +12,7 @@ const Spinner: React.FC<{ className?: string }> = ({ className = '' }) => (
         className,
       )}
     >
-      <RefreshCcw className="mx-auto h-6 w-6 animate-spin text-cyan-600" />
+      <RefreshCcw className="mx-auto size-6 animate-spin text-cyan-600" />
     </div>
   </TransitionWrapper>
 )
