@@ -43,7 +43,7 @@ const ThemeSwitcher: React.FC = () => {
           'rounded-full p-1 transition-colors',
         )}
       >
-        <SunDimIcon className="h-4 w-4" />
+        <SunDimIcon className="size-4" />
       </button>
       <button
         data-testid="theme-button-system"
@@ -54,7 +54,7 @@ const ThemeSwitcher: React.FC = () => {
           'rounded-full p-1 transition-colors',
         )}
       >
-        <Laptop2 className="m-[1px] h-3 w-3" />
+        <Laptop2 className="m-[1px] size-3" />
       </button>
       <button
         data-testid="theme-button-dark"
@@ -65,7 +65,7 @@ const ThemeSwitcher: React.FC = () => {
           'rounded-full p-1 transition-colors',
         )}
       >
-        <Moon className="h-4 w-4" />
+        <Moon className="size-4" />
       </button>
     </div>
   )

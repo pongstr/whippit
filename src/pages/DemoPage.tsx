@@ -21,7 +21,7 @@ const DemoPage: React.FC = () => {
               href="https://ui.shadcn.com/docs"
               rel="noreferrer"
             >
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="size-4" />
               <span>Shadcn UI</span>
             </a>
           </li>
@@ -32,7 +32,7 @@ const DemoPage: React.FC = () => {
               href="https://legendapp.com/open-source/state/intro/introduction/"
               rel="noreferrer"
             >
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="size-4" />
               <span>Legend State</span>
             </a>
           </li>
