@@ -1,5 +1,12 @@
 # @pongstr/whippit
 
+## 1.4.1
+
+### Patch Changes
+
+- 4e82ba8: chore: upgrade versions + fix npm publish
+- 098628b: chore: upgrade package versions
+
 ## 1.4.0
 
 ### Minor Changes
