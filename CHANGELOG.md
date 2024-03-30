@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.4.2
+
+### Patch Changes
+
+- d64e294: chore: rollback to @legendapp/state 2.1.8
+
 ## 1.4.1
 
 ### Patch Changes
