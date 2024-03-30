@@ -54,7 +54,7 @@ const ThemeSwitcher: React.FC = () => {
           'rounded-full p-1 transition-colors',
         )}
       >
-        <Laptop2 className="m-[1px] size-3" />
+        <Laptop2 className="m-px size-3" />
       </button>
       <button
         data-testid="theme-button-dark"

@@ -5,7 +5,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ['react-hooks', '@typescript-eslint', 'simple-import-sort'],
+  plugins: ['react-hooks', 'simple-import-sort'],
   extends: [
     'eslint:recommended',
     'plugin:import/typescript',
@@ -21,8 +21,8 @@ module.exports = {
     tsconfigRootDir: process.cwd(),
   },
   rules: {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'sort-imports': [
       'error',
       {
