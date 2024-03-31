@@ -1,11 +1,12 @@
+import { observer } from '@legendapp/state/react'
 import { Laptop2, Moon, SunDimIcon } from 'lucide-react'
 import React from 'react'
 
 import { cn } from '@/components/utils'
 import { AppSettingsType, settings$ } from '@/store'
 
-const ThemeSwitcher: React.FC = () => {
-  const theme = settings$.theme.use()
+const ThemeSwitcher: React.FC = observer(() => {
+  const theme = settings$.theme.get()
 
   const setTheme = (theme: AppSettingsType['theme']) =>
     settings$.theme.set(theme)
@@ -69,6 +70,6 @@ const ThemeSwitcher: React.FC = () => {
       </button>
     </div>
   )
-}
+})
 
 export default ThemeSwitcher

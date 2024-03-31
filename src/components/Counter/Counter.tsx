@@ -1,4 +1,4 @@
-import { useSelector } from '@legendapp/state/react'
+import { observer } from '@legendapp/state/react'
 import { Minus, Plus } from 'lucide-react'
 import React from 'react'
 
@@ -32,8 +32,8 @@ const ButtonCounter: React.FC<ButtonCounterPropType> = ({
   </Button>
 )
 
-export const Counter: React.FC = () => {
-  const counter = useSelector(() => settings$.get().counter)
+export const Counter: React.FC = observer(() => {
+  const counter = settings$.counter.get()
 
   const increment = React.useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
@@ -60,4 +60,4 @@ export const Counter: React.FC = () => {
       <ButtonCounter fn={increment} text="increment" />
     </div>
   )
-}
+})

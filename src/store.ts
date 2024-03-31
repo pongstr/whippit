@@ -1,5 +1,5 @@
 import { observable } from '@legendapp/state'
-import { enableReactUse } from '@legendapp/state/config/enableReactUse'
+import { enableReactTracking } from '@legendapp/state/config/enableReactTracking'
 import {
   configureObservablePersistence,
   persistObservable,
@@ -19,7 +19,7 @@ export type AppSettingsType = {
 export const TODO_SETTINGS = 'todo.settings'
 export const TODO_LIST = 'todo.collection'
 
-enableReactUse()
+enableReactTracking({ auto: true })
 
 export const settings$ = observable<AppSettingsType>({
   theme: 'light',

@@ -1,6 +1,5 @@
 {
   "name": "@pongstr/whippit",
-  "private": true,
   "version": "1.4.2",
   "type": "module",
   "scripts": {
@@ -15,7 +14,7 @@
     "test:ui": "NODE_ENV=test vitest --ui"
   },
   "dependencies": {
-    "@legendapp/state": "2.1.8",
+    "@legendapp/state": "^2.1.11",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
     "class-variance-authority": "^0.7.0",

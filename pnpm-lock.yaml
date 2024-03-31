@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@legendapp/state':
-    specifier: 2.1.8
-    version: 2.1.8(react@18.2.0)
+    specifier: ^2.1.11
+    version: 2.1.11(react@18.2.0)
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.73)(react@18.2.0)
@@ -2119,8 +2119,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@legendapp/state@2.1.8(react@18.2.0):
-    resolution: {integrity: sha512-SysgM/9sUg/PlsjnfsUtaL5eesiQ5UMYZ0XFmu+Yn3e1PJMDWuYbdr+uNtjQJnLV/agg44BpQHjNYtBSBolqmw==}
+  /@legendapp/state@2.1.11(react@18.2.0):
+    resolution: {integrity: sha512-btZY6PcBBJJ1cVj2YqFAhXM8nYZxdwa+5pHswAJOLhd5yw9jRmARE2NOGNY/3niVGvo3Fycu5LsSJO1OXwg6Bg==}
     peerDependencies:
       react: '>=16.8.0'
     peerDependenciesMeta:
