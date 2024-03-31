@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.4.3
+
+### Patch Changes
+
+- 25ead3d: chore: update @legendapp/state to v2.11.1
+
 ## 1.4.2
 
 ### Patch Changes
