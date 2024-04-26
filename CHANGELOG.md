@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.4.4
+
+### Patch Changes
+
+- dbb4759: chore: upgrade to react+packages
+
 ## 1.4.3
 
 ### Patch Changes
