@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.4.5
+
+### Patch Changes
+
+- 5a0497e: chore: restore lint rules + upgrade packages
+
 ## 1.4.4
 
 ### Patch Changes
