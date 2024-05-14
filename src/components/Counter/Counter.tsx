@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { settings$ } from '@/store'
 
 type ButtonCounterPropType = {
-  fn: (e: React.FormEvent<HTMLButtonElement>) => void
+  fn: (e_: React.FormEvent<HTMLButtonElement>) => void
   disabled?: boolean
   text: 'increment' | 'decrement'
 }
