@@ -8,10 +8,12 @@ module.exports = {
   plugins: ['react-hooks', 'simple-import-sort'],
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
     'plugin:tailwindcss/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -20,6 +22,9 @@ module.exports = {
     tsconfigRootDir: process.cwd(),
   },
   rules: {
+    '@typescript-eslint/prefer-for-of': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
@@ -49,7 +54,7 @@ module.exports = {
     'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
     'react/prop-types': 'off',
     'react/display-name': 'off',
-    'react/no-unknown-property': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
     'tailwindcss/no-custom-classname': 'off',
   },
   ignorePatterns: ['*.cjs'],
@@ -58,10 +63,4 @@ module.exports = {
       version: 'detect',
     },
   },
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx', '*.js'],
-      parser: '@typescript-eslint/parser',
-    },
-  ],
 }

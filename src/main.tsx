@@ -8,7 +8,7 @@ import { RouterProvider } from 'react-router-dom'
 import Spinner from '@/components/Spinner'
 import router from '@/router'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <React.Suspense fallback={<Spinner className="fixed left-0 top-0" />}>
       <RouterProvider router={router} />
