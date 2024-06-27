@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.4.6
+
+### Patch Changes
+
+- b94e295: chore: update packages
+
 ## 1.4.5
 
 ### Patch Changes
