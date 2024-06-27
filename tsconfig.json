@@ -20,7 +20,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "vite.config.ts"],
+  "include": ["src"],
   "exclude": [".eslintrc.cjs", "tailwind.config.cjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
