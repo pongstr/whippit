@@ -1,6 +1,6 @@
 {
   "name": "@pongstr/whippit",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "type": "module",
   "scripts": {
     "lint": "eslint --max-warnings=0 ./src",
