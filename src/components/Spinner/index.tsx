@@ -4,7 +4,9 @@ import React from 'react'
 import TransitionWrapper from '@/components/TransitionWrapper'
 import { cn } from '@/components/utils'
 
-const Spinner: React.FC<{ className?: string }> = ({ className = '' }) => (
+export const Spinner: React.FC<{ className?: string }> = ({
+  className = '',
+}) => (
   <TransitionWrapper>
     <div
       className={cn(
@@ -16,5 +18,3 @@ const Spinner: React.FC<{ className?: string }> = ({ className = '' }) => (
     </div>
   </TransitionWrapper>
 )
-
-export default Spinner

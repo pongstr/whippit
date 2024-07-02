@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="container">
-      <div className="flex items-center justify-start border-t border-t-border/[0.85] py-4 text-xs">
-        <span className="text-secondary-foreground">
+    <footer>
+      <div className="flex items-center justify-start px-4 font-mono text-xs">
+        <span className="text-muted-foreground">
           Copyright 2024 &copy; Pongstr. MIT
         </span>
       </div>
