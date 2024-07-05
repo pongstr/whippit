@@ -14,6 +14,7 @@ export type AppSettingsType = {
     skinTone: number
     view: 'grid' | 'list' | 'board'
   }
+  featureFlag: Record<string, boolean>
 }
 
 export const TODO_SETTINGS = 'todo.settings'
@@ -28,6 +29,10 @@ export const settings$ = observable<AppSettingsType>({
     currentTab: 'appearance',
     skinTone: 9995,
     view: 'grid',
+  },
+  featureFlag: {
+    pageReadme: false,
+    pageExamples: false,
   },
 })
 

@@ -4,48 +4,113 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --rosewater: 11 59% 67%;
+    --flamingo: 0 60% 67%;
+    --pink: 316 73% 69%;
+    --mauve: 266 85% 58%;
+    --red: 347 87% 44%;
+    --maroon: 355 76% 59%;
+    --peach: 22 99% 52%;
+    --yellow: 35 77% 49%;
+    --green: 109 58% 40%;
+    --teal: 183 74% 35%;
+    --sky: 197 97% 46%;
+    --sapphire: 189 70% 42%;
+    --blue: 220 91% 54%;
+    --lavender: 231 97% 72%;
+    --text: 234 16% 35%;
+    --subtext1: 233 13% 41%;
+    --subtext0: 233 10% 47%;
+    --overlay2: 232 10% 53%;
+    --overlay1: 231 10% 59%;
+    --overlay0: 228 11% 65%;
+    --surface2: 227 12% 71%;
+    --surface1: 225 14% 77%;
+    --surface0: 223 16% 83%;
+    --base: 220 23% 95%;
+    --mantle: 220 22% 92%;
+    --crust: 220 21% 89%;
+
+    --background: var(--base);
+    --foreground: var(--text);
+    --card: var(--base);
+    --card-foreground: var(--text);
+    --popover: var(--base);
+    --popover-foreground: var(--text);
+    --primary: var(--mauve);
+    --primary-foreground: var(--base);
+    --secondary: var(--surface0);
+    --secondary-foreground: var(--text);
+    --muted: var(--surface0);
+    --muted-foreground: var(--subtext1);
+    --accent: var(--lavender);
+    --accent-foreground: var(--base);
+    --destructive: var(--red);
+    --destructive-foreground: var(--base);
+    --border: var(--surface0);
+    --input: var(--surface0);
+    --ring: var(--mauve);
     --radius: 0.5rem;
+    --chart-1: var(--maroon);
+    --chart-2: var(--teal);
+    --chart-3: var(--blue);
+    --chart-4: var(--yellow);
+    --chart-5: var(--green);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 215 20% 65%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9;
+    --rosewater: 10 56% 91%;
+    --flamingo: 0 59% 88%;
+    --pink: 316 72% 86%;
+    --mauve: 267 84% 81%;
+    --red: 343 81% 75%;
+    --maroon: 350 65% 77%;
+    --peach: 23 92% 75%;
+    --yellow: 41 86% 83%;
+    --green: 115 54% 76%;
+    --teal: 170 57% 73%;
+    --sky: 189 71% 73%;
+    --sapphire: 199 76% 69%;
+    --blue: 217 92% 76%;
+    --lavender: 232 97% 85%;
+    --text: 226 64% 88%;
+    --subtext1: 227 35% 80%;
+    --subtext0: 228 24% 72%;
+    --overlay2: 228 17% 64%;
+    --overlay1: 230 13% 55%;
+    --overlay0: 231 11% 47%;
+    --surface2: 233 12% 39%;
+    --surface1: 234 13% 31%;
+    --surface0: 237 16% 23%;
+    --base: 240 21% 15%;
+    --mantle: 240 21% 12%;
+    --crust: 240 23% 9%;
+
+    --background: var(--mantle);
+    --foreground: var(--text);
+    --card: var(--base);
+    --card-foreground: var(--text);
+    --popover: var(--base);
+    --popover-foreground: var(--text);
+    --primary: var(--mauve);
+    --primary-foreground: var(--base);
+    --secondary: var(--surface0);
+    --secondary-foreground: var(--text);
+    --muted: var(--surface2);
+    --muted-foreground: var(--subtext1);
+    --accent: var(--mauve);
+    --accent-foreground: var(--base);
+    --destructive: var(--red);
+    --destructive-foreground: var(--base);
+    --border: var(--surface0);
+    --input: var(--surface0);
+    --ring: var(--mauve);
+    --radius: 0.5rem;
+    --chart-1: var(--maroon);
+    --chart-2: var(--teal);
+    --chart-3: var(--blue);
+    --chart-4: var(--yellow);
+    --chart-5: var(--green);
   }
 }
 
@@ -55,5 +120,30 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-size: 100%;
   }
+
+  input,
+  textarea {
+    @apply transition-colors;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  scroll-margin: 50px 0 0 50px;
+  @apply m-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply rounded-full;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-blend-overlay rounded-full transition-all;
+  @apply hover:bg-blend-overlay;
 }

@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
     <title>React Boilerplate.</title>
 
@@ -34,18 +37,24 @@
       href="/img/maskable-icon.png"
       sizes="180x180"
     />
-    <link rel="mask-icon" href="/img/maskable-icon.png" color="#c6a0f6" />
-    <meta name="theme-color" content="#c6a0f6" />
-    <link rel="icon" href="/img/whippit.svg" sizes="any" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon-180x180.png" />
 
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js', { scope: '/' })
-        })
-      }
-    </script>
+    <link rel="mask-icon" href="/img/maskable-icon.png" color="#c6a0f6" />
+
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+      rel="icon"
+    />
+
+    <meta
+      name="theme-color"
+      content="#8839ef"
+      media="(prefers-color-scheme: dark)"
+      rel="icon"
+    />
+
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon-180x180.png" />
   </head>
   <body>
     <div id="root"></div>

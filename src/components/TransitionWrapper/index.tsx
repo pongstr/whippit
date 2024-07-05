@@ -8,10 +8,10 @@ const TransitionWrapper: React.FC<React.PropsWithChildren<unknown>> = ({
     <AnimatePresence mode="popLayout">
       <motion.div
         key={location.pathname}
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 50 }}
-        transition={{ type: 'spring', duration: 0.5, delay: 0.3 }}
+        initial={{ opacity: 0, y: -150 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 550 }}
+        transition={{ type: 'spring', duration: 0.3 }}
       >
         {children}
       </motion.div>

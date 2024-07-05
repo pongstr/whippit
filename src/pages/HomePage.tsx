@@ -12,13 +12,15 @@ const Counter = lazy(() =>
 const HomePage: React.FC = () => {
   return (
     <AppLayout>
-      <main className="mx-4 flex h-[calc(100vh_-_92px)] items-center justify-between py-4 md:container sm:mx-auto">
+      <main className="mx-4 flex h-[calc(100dvh_-_105px)] items-center justify-center py-4 md:container sm:mx-auto">
         <div>
           <h2 className="block pb-2 text-5xl font-bold tracking-tighter md:text-7xl">
             <span>Boilerplate</span>
           </h2>
-          <span className="block font-mono text-sm text-muted-foreground md:text-base">
-            a React app prototype kickstarter.
+          <span className="block  text-sm font-bold md:text-base">
+            <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+              a React app prototype kickstarter.
+            </span>
           </span>
           <ul className="space-y-2 py-8 font-mono text-sm">
             <li>

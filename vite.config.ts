@@ -19,6 +19,7 @@ export default defineConfig({
     react(),
     VitePWA({
       injectRegister: 'inline',
+      devOptions: { enabled: true },
       registerType: 'autoUpdate',
       manifest: {
         name: 'Whippit! by @pongstr',
