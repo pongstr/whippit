@@ -6,6 +6,7 @@
     "lint": "eslint --max-warnings=0 ./src",
     "dev": "vite --host --port 9001",
     "build": "tsc && vite build",
+    "build:assets": "pwa-assets-generator --preset minimal-2023 public/img/whippit.svg -r .",
     "format": "prettier --write ./src",
     "preview": "tsc && vite build && vite preview",
     "prepare": "husky install",
@@ -42,6 +43,7 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
+    "@vite-pwa/assets-generator": "^0.2.4",
     "@vitejs/plugin-react": "^4.3.1",
     "@vitest/ui": "^0.34.7",
     "autoprefixer": "^10.4.20",
@@ -60,6 +62,7 @@
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4",
     "vite": "^5.4.1",
+    "vite-plugin-pwa": "^0.20.1",
     "vitest": "^0.34.6"
   },
   "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"

@@ -52,7 +52,7 @@ module.exports = {
     'react/no-unknown-property': 'off',
     'tailwindcss/no-custom-classname': 'off',
   },
-  ignorePatterns: ['*.cjs'],
+  ignorePatterns: ['*.cjs', 'vite.config.ts'],
   settings: {
     react: {
       version: 'detect',

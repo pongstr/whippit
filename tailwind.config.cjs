@@ -15,10 +15,7 @@ module.exports = {
         '2xl': '1400px',
       },
     },
-    fontFamily: {
-      sans: ['Poppins', 'system-ui'],
-      mono: ['JetBrains Mono'],
-    },
+
     extend: {
       colors: {
         border: 'hsl(var(--border))',
