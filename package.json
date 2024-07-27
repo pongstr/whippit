@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint --max-warnings=0 ./src",
     "dev": "vite --host --port 9001",
-    "build": "tsc && vite build",
+    "build": "pnpm build:assets && tsc && vite build",
     "build:assets": "pwa-assets-generator --preset minimal-2023 public/img/whippit.svg -r .",
     "format": "prettier --write ./src",
     "preview": "tsc && vite build && vite preview",
