@@ -4,7 +4,7 @@ import React, { lazy } from 'react'
 import AppLayout from '@/components/layout/AppLayout'
 
 const Counter = lazy(() =>
-  import('@/components/counter').then((module) => ({
+  import('@/components/counter/Counter').then((module) => ({
     default: module.Counter,
   })),
 )
