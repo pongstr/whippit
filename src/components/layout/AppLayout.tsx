@@ -1,4 +1,4 @@
-import React, { lazy } from 'react'
+import React, { lazy, useEffect } from 'react'
 
 import { settings$ } from '@/store'
 
@@ -8,7 +8,7 @@ const Footer = lazy(() => import('@/components/footer/Footer'))
 const AppLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const theme = settings$.theme.get()
 
-  React.useEffect(() => {
+  useEffect(() => {
     const root = window.document.documentElement
 
     root.classList.remove('light', 'dark')

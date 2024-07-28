@@ -22,9 +22,11 @@
     "clsx": "^2.1.1",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.292.0",
+    "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "short-uuid": "^4.2.2",
+    "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "wouter": "^3.3.1"
@@ -38,7 +40,7 @@
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^14.3.1",
     "@testing-library/user-event": "^14.5.2",
-    "@types/node": "^20.15.0",
+    "@types/node": "^20.16.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
@@ -63,7 +65,8 @@
     "typescript": "^5.5.4",
     "vite": "^5.4.1",
     "vite-plugin-pwa": "^0.20.1",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "workbox-window": "^7.1.0"
   },
   "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
 }

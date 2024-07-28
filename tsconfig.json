@@ -18,7 +18,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+   "types": [
+      "vite-plugin-pwa/react",
+    ]
   },
   "include": ["src"],
   "exclude": [".eslintrc.cjs", "tailwind.config.cjs", "vite.config.ts"],

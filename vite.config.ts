@@ -19,13 +19,21 @@ export default defineConfig({
     react(),
     VitePWA({
       injectRegister: 'inline',
-      devOptions: { enabled: true },
-      registerType: 'autoUpdate',
+      mode:
+        process.env.NODE_ENV === 'production' ? 'production' : 'development',
+      devOptions: {
+        enabled: true, //process.env.SW_DEV == 'true',
+        type: 'module',
+        navigateFallback: 'index.html',
+      },
+      registerType: 'prompt',
       manifest: {
+        start_url: '/',
         name: 'Whippit! by @pongstr',
         short_name: 'whippit',
         description: 'a React app boilerplate',
         theme_color: '#c6a0f6',
+        display: 'standalone',
         icons: [
           {
             src: '/img/pwa-64x64.png',
@@ -49,9 +57,30 @@ export default defineConfig({
             purpose: 'maskable',
           },
         ],
+        screenshots: [
+          {
+            src: '/img/screenshot-desktop.png',
+            sizes: '1092x746',
+            type: 'image/png',
+            form_factor: 'wide',
+            label: 'whippit!',
+          },
+          {
+            src: '/img/screenshot-mobile.png',
+            sizes: '510x931',
+            type: 'image/png',
+            form_factor: 'narrow',
+            label: 'whippit!',
+          },
+        ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        globPatterns: ['**/*.*'],
+        globIgnores: [
+          '**/node_modules/**',
+          'dev-dist/sw.js',
+          'dev-dist/workbox-*.js',
+        ],
       },
     }),
   ],
