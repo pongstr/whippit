@@ -22,7 +22,7 @@ export default defineConfig({
       mode:
         process.env.NODE_ENV === 'production' ? 'production' : 'development',
       devOptions: {
-        enabled: true, //process.env.SW_DEV == 'true',
+        enabled: process.env.NODE_ENV !== 'production',
         type: 'module',
         navigateFallback: 'index.html',
       },

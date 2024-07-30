@@ -31,12 +31,23 @@ const ChangeLog: React.FC<{ reload: () => void }> = ({ reload }) => {
   )
 }
 
-const NetworkStatus: React.FC<{ status?: boolean }> = ({ status = true }) => {
+const NetworkStatus: React.FC<{ status?: boolean; toastId: string }> = ({
+  status = true,
+  toastId,
+}) => {
   if (status) {
     return (
       <div className="flex justify-start gap-2 items-center w-full">
         <Wifi className="size-4 text-blue-500" />
         <span>You&apos;re back online.</span>
+        <Button
+          size="sm"
+          variant="secondary"
+          className="ml-auto"
+          onClick={() => toast.dismiss(toastId)}
+        >
+          <span className="text-[12px]">Close</span>
+        </Button>
       </div>
     )
   }
@@ -46,6 +57,14 @@ const NetworkStatus: React.FC<{ status?: boolean }> = ({ status = true }) => {
       <span className="text-foreground/50">
         You&apos;re offline. Check your connection.
       </span>
+      <Button
+        size="sm"
+        variant="secondary"
+        className="ml-auto"
+        onClick={() => toast.dismiss(toastId)}
+      >
+        <span className="text-[12px]">Close</span>
+      </Button>
     </div>
   )
 }
@@ -65,7 +84,8 @@ export const UpdateContent: React.FC = () => {
   useEffect(() => {
     if (needRefresh) {
       toast(<ChangeLog reload={close} />, {
-        duration: Infinity,
+        duration: 90000,
+        closeButton: true,
       })
     }
 
@@ -77,13 +97,19 @@ export const UpdateContent: React.FC = () => {
           : true
 
       if (!status) {
-        toast(<NetworkStatus status={false} />, {
-          duration: Infinity,
+        const offlineToast = 'offline'
+        toast(<NetworkStatus status={false} toastId={offlineToast} />, {
+          duration: 9000,
+          id: offlineToast,
         })
         return
       }
 
-      toast(<NetworkStatus status />)
+      const onlineToast = 'online'
+      toast(<NetworkStatus status toastId={onlineToast} />, {
+        duration: 5000,
+        id: onlineToast,
+      })
     }
 
     window.addEventListener('offline', offline)
