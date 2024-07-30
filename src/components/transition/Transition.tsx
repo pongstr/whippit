@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 
-const TransitionWrapper: React.FC<React.PropsWithChildren<unknown>> = ({
+export const Transition: React.FC<React.PropsWithChildren<unknown>> = ({
   children,
 }) => {
   return (
@@ -18,4 +18,3 @@ const TransitionWrapper: React.FC<React.PropsWithChildren<unknown>> = ({
     </AnimatePresence>
   )
 }
-export default TransitionWrapper

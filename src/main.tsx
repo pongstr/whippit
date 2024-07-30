@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client'
 import { registerSW } from 'virtual:pwa-register'
 import { Route, Router, Switch } from 'wouter'
 
-import TransitionWrapper from '@/components/TransitionWrapper'
+import { Transition } from '@/components/transition/Transition'
 import { Toaster } from '@/components/ui/sonner'
 import { UpdateContent } from '@/components/update-content/UpdateContent'
 
@@ -21,17 +21,17 @@ if ('serviceWorker' in navigator) {
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
     <Suspense>
-      <TransitionWrapper>
-        <Router>
-          <Switch>
+      <Router>
+        <Switch>
+          <Transition>
             <Route path="/examples" component={ExamplesPage} />
             <Route path="/readme" component={DocsPage} />
             <Route path="/" component={HomePage} />
-          </Switch>
-        </Router>
-      </TransitionWrapper>
-      <UpdateContent />
+          </Transition>
+        </Switch>
+      </Router>
       <Toaster />
+      <UpdateContent />
     </Suspense>
   </StrictMode>,
 )
