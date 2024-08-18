@@ -2,8 +2,8 @@ import React, { lazy } from 'react'
 
 import { settings$ } from '@/store'
 
-const Header = lazy(() => import('@/components/header'))
-const Footer = lazy(() => import('@/components/footer'))
+const Header = lazy(() => import('@/components/header/index'))
+const Footer = lazy(() => import('@/components/footer/index'))
 
 const AppLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const theme = settings$.theme.get()
