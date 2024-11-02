@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.4.8
+
+### Patch Changes
+
+- 6a9aa60: chore: upgrade dependencies
+
 ## 1.4.7
 
 ### Patch Changes
