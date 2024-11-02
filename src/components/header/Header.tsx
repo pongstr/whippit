@@ -2,6 +2,7 @@ import { BookOpenText, SquareCode } from 'lucide-react'
 import React from 'react'
 import { Link } from 'wouter'
 
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/components/utils'
 import { settings$ } from '@/store'
@@ -60,6 +61,8 @@ const Header: React.FC = () => {
               <span>Snippets </span>
             </Link>
           )}
+
+          <ThemeSwitcher />
         </nav>
       </div>
     </header>
