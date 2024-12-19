@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import React, { lazy } from 'react'
 
 import AppLayout from '@/components/layouts/app-layout'
+import { Transition } from '@/components/transition'
 
 const Counter = lazy(() =>
   import('@/components/counter').then((module) => ({
@@ -13,7 +14,7 @@ const HomePage: React.FC = () => {
   return (
     <AppLayout>
       <main className="mx-4 flex h-[calc(100dvh_-_105px)] items-center justify-center py-4 md:container sm:mx-auto">
-        <div>
+        <Transition>
           <h2 className="block pb-2 text-5xl font-bold tracking-tighter md:text-7xl">
             <span>Boilerplate</span>
           </h2>
@@ -59,7 +60,7 @@ const HomePage: React.FC = () => {
           </ul>
 
           <Counter />
-        </div>
+        </Transition>
       </main>
     </AppLayout>
   )
