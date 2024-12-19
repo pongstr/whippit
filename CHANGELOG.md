@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.4.9
+
+### Patch Changes
+
+- c9195e3: chore(deps): update package deps
+
 ## 1.4.8
 
 ### Patch Changes
