@@ -4,7 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import ThemeSwitcher from '@/components/theme-switcher'
 
 const meta: Meta<typeof ThemeSwitcher> = {
-  title: 'components/theme switcher',
+  title: 'components/Theme Switcher',
   component: ThemeSwitcher,
   parameters: {
     layout: 'centered',
