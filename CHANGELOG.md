@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.6.0
+
+### Minor Changes
+
+- 470807c: feat(storybook): setup+stories
+
 ## 1.5.0
 
 ### Minor Changes
