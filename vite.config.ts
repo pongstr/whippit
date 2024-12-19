@@ -1,6 +1,5 @@
-/// <reference types="vitest" />
 /// <reference types="vite/client" />
-
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve, join } from 'path'
@@ -15,6 +14,15 @@ export default defineConfig({
       components: resolve(join(process.cwd(), 'src/components')),
     },
   },
+  // @ts-ignore
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./src/tests/setup.ts'],
+  },
+  optimizeDeps: {
+    force: true,
+  },
   plugins: [
     react(),
     VitePWA({
@@ -22,7 +30,7 @@ export default defineConfig({
       mode:
         process.env.NODE_ENV === 'production' ? 'production' : 'development',
       devOptions: {
-        enabled: process.env.NODE_ENV !== 'production',
+        enabled: false,
         type: 'module',
         navigateFallback: 'index.html',
       },
@@ -84,9 +92,4 @@ export default defineConfig({
       },
     }),
   ],
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./src/tests/setup.ts'],
-  },
 })

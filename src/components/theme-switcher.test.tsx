@@ -1,7 +1,8 @@
-import { act, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
+import { act } from 'react'
 import { describe, expect, it } from 'vitest'
 
-import ThemeSwitcher from '.'
+import ThemeSwitcher from '@/components/theme-switcher'
 
 describe('<ThemeSwitcher /> Component', () => {
   it('should be present in the page', () => {
@@ -17,7 +18,7 @@ describe('<ThemeSwitcher /> Component', () => {
       'light',
     )
 
-    act(() => void screen.getByTestId('theme-button-dark').click())
+    act(() => screen.getByTestId('theme-button-dark').click())
     expect(screen.getByTestId('theme-switch-container')).toHaveAttribute(
       'data-theme',
       'dark',

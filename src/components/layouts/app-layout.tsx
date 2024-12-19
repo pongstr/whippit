@@ -2,8 +2,8 @@ import React, { lazy, useEffect } from 'react'
 
 import { settings$ } from '@/store'
 
-const Header = lazy(() => import('@/components/header/Header'))
-const Footer = lazy(() => import('@/components/footer/Footer'))
+const Header = lazy(() => import('@/components/header'))
+const Footer = lazy(() => import('@/components/footer'))
 
 const AppLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const theme = settings$.theme.get()

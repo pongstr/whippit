@@ -1,10 +1,10 @@
 import { ArrowRight } from 'lucide-react'
 import React, { lazy } from 'react'
 
-import AppLayout from '@/components/layout/AppLayout'
+import AppLayout from '@/components/layouts/app-layout'
 
 const Counter = lazy(() =>
-  import('@/components/counter/Counter').then((module) => ({
+  import('@/components/counter').then((module) => ({
     default: module.Counter,
   })),
 )

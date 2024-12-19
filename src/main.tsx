@@ -6,9 +6,9 @@ import ReactDOM from 'react-dom/client'
 import { registerSW } from 'virtual:pwa-register'
 import { Route, Router, Switch } from 'wouter'
 
-import { Transition } from '@/components/transition/Transition'
+import { Transition } from '@/components/transition'
 import { Toaster } from '@/components/ui/sonner'
-import { UpdateContent } from '@/components/update-content/UpdateContent'
+import { UpdateContent } from '@/components/update-content'
 
 const HomePage = lazy(() => import('@/pages/HomePage'))
 const DocsPage = lazy(() => import('@/pages/DocsPage'))

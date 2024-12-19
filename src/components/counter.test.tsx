@@ -1,7 +1,7 @@
 import { act, render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
-import { Counter } from './Counter'
+import { Counter } from './counter'
 
 describe('<Counter /> Compoennt', () => {
   it('render component', () => {
