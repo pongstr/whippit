@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'motion/react'
 import React from 'react'
 
 export const Transition: React.FC<React.PropsWithChildren<unknown>> = ({
@@ -8,10 +8,10 @@ export const Transition: React.FC<React.PropsWithChildren<unknown>> = ({
     <AnimatePresence mode="popLayout">
       <motion.div
         key={location.pathname}
-        initial={{ opacity: 0, y: -150, overflowY: 'hidden' }}
+        initial={{ opacity: 0, y: -50, overflowY: 'hidden' }}
         animate={{ opacity: 1, y: 0, overflowY: 'hidden' }}
-        exit={{ opacity: 0, y: 550, overflowY: 'hidden' }}
-        transition={{ type: 'spring', duration: 0.3 }}
+        exit={{ opacity: 0, y: 50, overflowY: 'hidden' }}
+        transition={{ type: 'spring', duration: 1.5 }}
       >
         {children}
       </motion.div>
