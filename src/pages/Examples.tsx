@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AppLayout from '@/components/layout/AppLayout'
+import AppLayout from '@/components/layouts/app-layout'
 
 const ExamplesPage: React.FC = () => {
   return (

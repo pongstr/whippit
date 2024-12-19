@@ -2,7 +2,7 @@ import { BookOpenText, SquareCode } from 'lucide-react'
 import React from 'react'
 import { Link } from 'wouter'
 
-import ThemeSwitcher from '@/components/ThemeSwitcher'
+import ThemeSwitcher from '@/components/theme-switcher'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/components/utils'
 import { settings$ } from '@/store'
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   const flags = settings$.featureFlag.get()
 
   return (
-    <header className="sticky top-0 z-50  w-full items-center border-b bg-background backdrop-blur-lg">
+    <header className="sticky top-0 z-50  w-full items-center bg-background backdrop-blur-lg">
       <div className="flex justify-between p-4 md:container">
         <div className="flex items-center justify-start">
           <Pongstr style={{ width: 26, height: 26 }} />

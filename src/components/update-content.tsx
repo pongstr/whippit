@@ -77,7 +77,7 @@ export const UpdateContent: React.FC = () => {
 
   const close = () => {
     setNeedRefresh(false)
-    updateServiceWorker(true)
+    updateServiceWorker(true).then(console.info).catch(console.error)
     setTimeout(() => window.location.reload(), 500)
   }
 
@@ -91,8 +91,7 @@ export const UpdateContent: React.FC = () => {
 
     function offline() {
       const status =
-        typeof navigator !== 'undefined' &&
-        typeof navigator.onLine === 'boolean'
+        typeof navigator !== 'undefined' && navigator.onLine
           ? navigator.onLine
           : true
 

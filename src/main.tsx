@@ -6,9 +6,8 @@ import ReactDOM from 'react-dom/client'
 import { registerSW } from 'virtual:pwa-register'
 import { Route, Router, Switch } from 'wouter'
 
-import { Transition } from '@/components/transition/Transition'
 import { Toaster } from '@/components/ui/sonner'
-import { UpdateContent } from '@/components/update-content/UpdateContent'
+import { UpdateContent } from '@/components/update-content'
 
 const HomePage = lazy(() => import('@/pages/HomePage'))
 const DocsPage = lazy(() => import('@/pages/DocsPage'))
@@ -23,11 +22,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Suspense>
       <Router>
         <Switch>
-          <Transition>
-            <Route path="/examples" component={ExamplesPage} />
-            <Route path="/readme" component={DocsPage} />
-            <Route path="/" component={HomePage} />
-          </Transition>
+          <Route path="/examples" component={ExamplesPage} />
+          <Route path="/readme" component={DocsPage} />
+          <Route path="/" component={HomePage} />
         </Switch>
       </Router>
       <Toaster />
