@@ -115,11 +115,14 @@
 }
 
 @layer base {
+  
+  
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    @apply selection:bg-blue-400 selection:text-white;
     font-size: 100%;
   }
 
@@ -129,7 +132,6 @@
   }
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -137,12 +139,10 @@
   @apply m-2;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   @apply rounded-full;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   @apply bg-blend-overlay rounded-full transition-all;
   @apply hover:bg-blend-overlay;
