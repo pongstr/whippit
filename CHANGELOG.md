@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.6.1
+
+### Patch Changes
+
+- 431e8e0: chore: upgrade dependencies
+
 ## 1.6.0
 
 ### Minor Changes
