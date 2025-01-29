@@ -2,4 +2,5 @@
 '@pongstr/whippit': patch
 ---
 
-chore: upgrade dependencies
+- feat: added webworker setup+demo
+- chore: included catppuccin colors to tailwind.config

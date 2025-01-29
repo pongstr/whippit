@@ -1,11 +1,8 @@
-import { BookOpenText, SquareCode } from 'lucide-react'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import React from 'react'
 import { Link } from 'wouter'
 
 import ThemeSwitcher from '@/components/theme-switcher'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/components/utils'
-import { settings$ } from '@/store'
 
 const Pongstr: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg viewBox="0 0 312 247" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -17,8 +14,6 @@ const Pongstr: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 )
 
 const Header: React.FC = () => {
-  const flags = settings$.featureFlag.get()
-
   return (
     <header className="sticky top-0 z-50  w-full items-center bg-background backdrop-blur-lg">
       <div className="flex justify-between p-4 md:container">
@@ -29,40 +24,16 @@ const Header: React.FC = () => {
           </h1>
         </div>
 
-        <nav className="flex items-center justify-end gap-1">
-          {flags.pageReadme && (
-            <Link
-              to="/readme"
-              className={(active: boolean) =>
-                cn(
-                  buttonVariants({ variant: 'link', size: 'sm' }),
-                  'uppercase gap-1',
-                  active ? 'text-foreground' : 'text-primary',
-                )
-              }
-            >
-              <BookOpenText className="size-3.5" />
-              <span>Readme</span>
-            </Link>
-          )}
-
-          {flags.pageExamples && (
-            <Link
-              to="/examples"
-              className={(active: boolean) =>
-                cn(
-                  buttonVariants({ variant: 'link', size: 'sm' }),
-                  'uppercase gap-1',
-                  active ? 'text-foreground' : 'text-primary',
-                )
-              }
-            >
-              <SquareCode className="size-3.5" />
-              <span>Snippets </span>
-            </Link>
-          )}
-
+        <nav className="flex items-center justify-end gap-1.5">
           <ThemeSwitcher />
+          <a
+            href="https://github.com/pongstr/whippit"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GitHubLogoIcon className="size-4" />
+            <span className="sr-only">Github</span>
+          </a>
         </nav>
       </div>
     </header>

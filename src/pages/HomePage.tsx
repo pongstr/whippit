@@ -10,6 +10,12 @@ const Counter = lazy(() =>
   })),
 )
 
+const WorkerDemo = lazy(() =>
+  import('@/components/worker-demo').then((module) => ({
+    default: module.WorkerDemo,
+  })),
+)
+
 const HomePage: React.FC = () => {
   return (
     <AppLayout>
@@ -59,7 +65,10 @@ const HomePage: React.FC = () => {
             </li>
           </ul>
 
-          <Counter />
+          <div className="flex w-full flex-col items-center justify-center">
+            <Counter />
+            <WorkerDemo />
+          </div>
         </Transition>
       </main>
     </AppLayout>

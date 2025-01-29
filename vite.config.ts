@@ -1,4 +1,3 @@
-/// <reference types="vite/client" />
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -14,11 +13,13 @@ export default defineConfig({
       components: resolve(join(process.cwd(), 'src/components')),
     },
   },
-  // @ts-ignore
   test: {
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/tests/setup.ts'],
+  },
+  worker: {
+    format: 'es',
   },
   optimizeDeps: {
     force: true,

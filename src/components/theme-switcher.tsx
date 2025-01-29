@@ -1,5 +1,5 @@
 import { observer } from '@legendapp/state/react'
-import { Laptop2, Lightbulb, LightbulbOff } from 'lucide-react'
+import { Laptop2, Sun, SunMoon } from 'lucide-react'
 import React, { FC } from 'react'
 
 import {
@@ -14,9 +14,9 @@ import { AppSettingsType, settings$ } from '@/store'
 const ThemeIcon: FC<{ theme: AppSettingsType['theme'] }> = ({ theme }) => {
   switch (theme) {
     case 'light':
-      return <Lightbulb className="size-4" />
+      return <Sun className="size-4" />
     case 'dark':
-      return <LightbulbOff className="size-4" />
+      return <SunMoon className="size-4" />
     default:
       return <Laptop2 className="m-px size-4" />
   }
@@ -50,7 +50,7 @@ const ThemeSwitcher: React.FC = observer(() => {
     <div data-testid="theme-switch-container" data-theme={theme}>
       <DropdownMenu>
         <DropdownMenuTrigger
-          className="flex size-8 items-center justify-center rounded-full border p-0"
+          className="flex size-8 items-center justify-center rounded-full p-0 focus:bg-muted focus-visible:bg-muted active:bg-muted"
           data-testid="trigger"
           data-selected-theme={theme}
         >
