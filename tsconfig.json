@@ -23,7 +23,7 @@
       "vite-plugin-pwa/react",
     ]
   },
-  "include": ["src"],
+  "include": ["src/**/*" ],
   "exclude": [".eslintrc.cjs", "tailwind.config.cjs", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
