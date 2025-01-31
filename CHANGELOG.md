@@ -1,5 +1,12 @@
 # @pongstr/whippit
 
+## 1.6.2
+
+### Patch Changes
+
+- - feat: added webworker setup+demo
+  - chore: included catppuccin colors to tailwind.config.
+
 ## 1.6.1
 
 ### Patch Changes
