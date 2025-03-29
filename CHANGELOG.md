@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.7.0
+
+### Minor Changes
+
+- 005bfa9: chore: upgrade eslint+config, fixup some shit" -n
+
 ## 1.6.2
 
 ### Patch Changes
