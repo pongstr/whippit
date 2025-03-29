@@ -5,8 +5,8 @@ import {
 } from '@legendapp/state/persist'
 import { ObservablePersistIndexedDB } from '@legendapp/state/persist-plugins/indexeddb'
 
-export const TODO_SETTINGS = 'todo.settings'
-export const TODO_LIST = 'todo.collection'
+const TODO_SETTINGS = 'todo.settings'
+const TODO_LIST = 'todo.collection'
 
 export const settings$ = observable<App.Settings>({
   theme: 'dark',

@@ -1,4 +1,6 @@
 import * as cowsay from 'https://cdn.jsdelivr.net/npm/cowsay@1.6.0/+esm'
+
+/** @lintignore */
 ;(function () {
   if (!cowsay) return
 
