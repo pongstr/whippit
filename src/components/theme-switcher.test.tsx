@@ -16,7 +16,7 @@ describe('<ThemeSwitcher /> Component', () => {
 
     expect(screen.getByTestId('trigger')).toHaveAttribute(
       'data-selected-theme',
-      'light',
+      'dark',
     )
 
     await act(async () => await userEvent.click(screen.getByTestId('trigger')))

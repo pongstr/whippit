@@ -23,7 +23,7 @@ export const TODO_LIST = 'todo.collection'
 enableReactTracking({ auto: true })
 
 export const settings$ = observable<AppSettingsType>({
-  theme: 'light',
+  theme: 'dark',
   counter: 0,
   userSettings: {
     currentTab: 'appearance',
