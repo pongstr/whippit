@@ -1,28 +1,14 @@
 import { observable } from '@legendapp/state'
-import { enableReactTracking } from '@legendapp/state/config/enableReactTracking'
 import {
   configureObservablePersistence,
   persistObservable,
 } from '@legendapp/state/persist'
 import { ObservablePersistIndexedDB } from '@legendapp/state/persist-plugins/indexeddb'
 
-export type AppSettingsType = {
-  theme: 'light' | 'dark' | 'system'
-  counter: number
-  userSettings: {
-    currentTab: 'dashboard' | 'projects' | 'tasks' | 'appearance' | 'forms'
-    skinTone: number
-    view: 'grid' | 'list' | 'board'
-  }
-  featureFlag: Record<string, boolean>
-}
-
 export const TODO_SETTINGS = 'todo.settings'
 export const TODO_LIST = 'todo.collection'
 
-enableReactTracking({ auto: true })
-
-export const settings$ = observable<AppSettingsType>({
+export const settings$ = observable<App.Settings>({
   theme: 'dark',
   counter: 0,
   userSettings: {

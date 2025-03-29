@@ -10,3 +10,20 @@ declare module 'virtual:pwa-register/react' {
     updateServiceWorker: (_reloadPage?: boolean) => Promise<void>
   }
 }
+
+declare global {
+  namespace App {
+    type Settings = {
+      theme: 'light' | 'dark' | 'system'
+      counter: number
+      userSettings: {
+        currentTab: 'dashboard' | 'projects' | 'tasks' | 'appearance' | 'forms'
+        skinTone: number
+        view: 'grid' | 'list' | 'board'
+      }
+      featureFlag: Record<string, boolean>
+    }
+  }
+}
+
+export {}

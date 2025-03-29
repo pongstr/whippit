@@ -19,19 +19,15 @@ describe('<ThemeSwitcher /> Component', () => {
       'dark',
     )
 
-    await act(async () => await userEvent.click(screen.getByTestId('trigger')))
+    await userEvent.click(screen.getByTestId('trigger'))
 
     expect(screen.getByTestId('theme-button-dark')).toBeInTheDocument()
 
-    await act(
-      async () =>
-        await userEvent.click(screen.getByTestId('theme-button-dark')),
-    )
-
-    expect(screen.getByTestId('trigger')).toHaveAttribute(
-      'data-selected-theme',
-      'dark',
-    )
+    await userEvent.click(screen.getByTestId('theme-button-dark')),
+      expect(screen.getByTestId('trigger')).toHaveAttribute(
+        'data-selected-theme',
+        'dark',
+      )
     expect(screen.getByTestId('theme-switch-container')).toHaveAttribute(
       'data-theme',
       'dark',

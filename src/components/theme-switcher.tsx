@@ -1,4 +1,4 @@
-import { observer } from '@legendapp/state/react'
+import { observer, useSelector } from '@legendapp/state/react'
 import { Laptop2, Sun, SunMoon } from 'lucide-react'
 import React, { FC } from 'react'
 
@@ -9,9 +9,9 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { cn } from '@/components/utils'
-import { AppSettingsType, settings$ } from '@/store'
+import { settings$ } from '@/store'
 
-const ThemeIcon: FC<{ theme: AppSettingsType['theme'] }> = ({ theme }) => {
+const ThemeIcon: FC<{ theme: App.Settings['theme'] }> = ({ theme }) => {
   switch (theme) {
     case 'light':
       return <Sun className="size-4" />
@@ -23,10 +23,9 @@ const ThemeIcon: FC<{ theme: AppSettingsType['theme'] }> = ({ theme }) => {
 }
 
 const ThemeSwitcher: React.FC = observer(() => {
-  const theme = settings$.theme.get()
+  const theme = useSelector(() => settings$.theme.get())
 
-  const setTheme = (theme: AppSettingsType['theme']) =>
-    settings$.theme.set(theme)
+  const setTheme = (theme: App.Settings['theme']) => settings$.theme.set(theme)
 
   React.useEffect(() => {
     const root = window.document.documentElement
