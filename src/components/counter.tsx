@@ -1,3 +1,4 @@
+import { useSelector } from '@legendapp/state/react'
 import { Minus, Plus } from 'lucide-react'
 import React from 'react'
 
@@ -9,7 +10,7 @@ type ButtonCounterPropType = {
 }
 
 const ButtonCounter: React.FC<ButtonCounterPropType> = ({ text }) => {
-  const counter = settings$.counter.get()
+  const counter = useSelector(() => settings$.counter.get())
 
   const increment = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault()
@@ -40,7 +41,7 @@ const ButtonCounter: React.FC<ButtonCounterPropType> = ({ text }) => {
 }
 
 const CounterLabel: React.FC = () => {
-  const counter = settings$.counter.get()
+  const counter = useSelector(() => settings$.counter.get())
 
   return (
     <div className="flex w-20 select-none items-center justify-center rounded border bg-background">

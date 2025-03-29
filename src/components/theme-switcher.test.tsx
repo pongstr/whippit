@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { act } from 'react'
 import { describe, expect, it } from 'vitest'
 
 import ThemeSwitcher from '@/components/theme-switcher'
@@ -19,14 +18,10 @@ describe('<ThemeSwitcher /> Component', () => {
       'dark',
     )
 
-    await act(async () => await userEvent.click(screen.getByTestId('trigger')))
-
+    userEvent.click(screen.getByTestId('trigger'))
     expect(screen.getByTestId('theme-button-dark')).toBeInTheDocument()
 
-    await act(
-      async () =>
-        await userEvent.click(screen.getByTestId('theme-button-dark')),
-    )
+    userEvent.click(screen.getByTestId('theme-button-dark'))
 
     expect(screen.getByTestId('trigger')).toHaveAttribute(
       'data-selected-theme',
