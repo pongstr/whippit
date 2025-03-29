@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.8.1
+
+### Patch Changes
+
+- 566f73d: chore: remove unused source files
+
 ## 1.8.0
 
 ### Minor Changes
