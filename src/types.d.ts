@@ -4,18 +4,9 @@ declare module 'virtual:pwa-register/react' {
 
   export type { RegisterSWOptions }
 
-  export function useRegisterSW(options?: RegisterSWOptions): {
+  export function useRegisterSW(_options?: RegisterSWOptions): {
     needRefresh: [boolean, Dispatch<SetStateAction<boolean>>]
     offlineReady: [boolean, Dispatch<SetStateAction<boolean>>]
-    updateServiceWorker: (reloadPage?: boolean) => Promise<void>
+    updateServiceWorker: (_reloadPage?: boolean) => Promise<void>
   }
-}
-
-declare module 'https://cdn.jsdelivr.net/npm/cowsay@1.6.0/+esm' {
-  export function say(options: { text: string; e?: string; T?: string }): string
-  export function think(options: {
-    text: string
-    e?: string
-    T?: string
-  }): string
 }

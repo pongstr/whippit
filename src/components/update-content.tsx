@@ -1,15 +1,16 @@
-/* eslint-disable */
-import React, { useEffect } from 'react'
+import { ExternalLink, Wifi, WifiOff } from 'lucide-react'
+import React, { useCallback, useEffect } from 'react'
 import { toast } from 'sonner'
 import { useRegisterSW } from 'virtual:pwa-register/react'
-import { Button, buttonVariants } from '@/components/ui/button'
+
+import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button-variants'
 import { cn } from '@/components/utils'
-import { ExternalLink, Wifi, WifiOff } from 'lucide-react'
 
 const ChangeLog: React.FC<{ reload: () => void }> = ({ reload }) => {
   return (
-    <div className="flex justify-between items-center w-full">
-      <div className="flex justify-start items-center">
+    <div className="flex w-full items-center justify-between">
+      <div className="flex items-center justify-start">
         <span className="text-muted-foreground">Updates available.</span>
         <a
           className={cn(
@@ -37,7 +38,7 @@ const NetworkStatus: React.FC<{ status?: boolean; toastId: string }> = ({
 }) => {
   if (status) {
     return (
-      <div className="flex justify-start gap-2 items-center w-full">
+      <div className="flex w-full items-center justify-start gap-2">
         <Wifi className="size-4 text-blue-500" />
         <span>You&apos;re back online.</span>
         <Button
@@ -52,7 +53,7 @@ const NetworkStatus: React.FC<{ status?: boolean; toastId: string }> = ({
     )
   }
   return (
-    <div className="flex justify-start gap-2 items-center w-full">
+    <div className="flex w-full items-center justify-start gap-2">
       <WifiOff className="size-4 text-muted-foreground/60" />
       <span className="text-foreground/50">
         You&apos;re offline. Check your connection.
@@ -75,11 +76,11 @@ export const UpdateContent: React.FC = () => {
     updateServiceWorker,
   } = useRegisterSW()
 
-  const close = () => {
+  const close = useCallback(() => {
     setNeedRefresh(false)
     updateServiceWorker(true).then(console.info).catch(console.error)
     setTimeout(() => window.location.reload(), 500)
-  }
+  }, [setNeedRefresh, updateServiceWorker])
 
   useEffect(() => {
     if (needRefresh) {
@@ -117,7 +118,7 @@ export const UpdateContent: React.FC = () => {
       window.removeEventListener('offline', offline)
       window.removeEventListener('online', offline)
     }
-  }, [needRefresh])
+  }, [needRefresh, close])
 
   return null
 }

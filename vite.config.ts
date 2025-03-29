@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve, join } from 'path'
+import { join,resolve } from 'path'
+import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
