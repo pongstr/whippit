@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.8.0
+
+### Minor Changes
+
+- 41cef01: chore: React 19 upgrade
+
 ## 1.7.0
 
 ### Minor Changes
