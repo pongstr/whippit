@@ -24,7 +24,7 @@
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.292.0",
+    "lucide-react": "^0.511.0",
     "motion": "^11.18.2",
     "next-themes": "^0.3.0",
     "react": "^19.1.0",
@@ -45,6 +45,8 @@
     "@storybook/react-vite": "^8.6.11",
     "@storybook/test": "^8.6.11",
     "@storybook/theming": "^8.6.11",
+    "@tailwindcss/postcss": "^4.1.7",
+    "@tailwindcss/vite": "^4.1.7",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
@@ -62,7 +64,6 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-storybook": "^0.11.6",
-    "eslint-plugin-tailwindcss": "^3.18.0",
     "globals": "^16.0.0",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
@@ -70,7 +71,8 @@
     "postcss": "^8.5.3",
     "prettier": "^2.8.8",
     "storybook": "^8.6.11",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^4.1.7",
+    "tw-animate-css": "^1.3.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.28.0",
     "vite": "^6.2.3",
@@ -84,5 +86,5 @@
       "src/worker/worker.ts"
     ]
   },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }

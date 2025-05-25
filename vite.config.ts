@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
+import tailwindcss from "@tailwindcss/vite"
 import react from '@vitejs/plugin-react'
-import { join,resolve } from 'path'
+import { join, resolve } from 'path'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -26,6 +27,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    tailwindcss(),
     VitePWA({
       injectRegister: 'inline',
       mode:

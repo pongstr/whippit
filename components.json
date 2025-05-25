@@ -6,11 +6,16 @@
   "tailwind": {
     "config": "tailwind.config.cjs",
     "css": "src/main.css",
-    "baseColor": "slate",
-    "cssVariables": true
+    "baseColor": "zinc",
+    "cssVariables": true,
+    "prefix": ""
   },
   "aliases": {
     "components": "@/components",
-    "utils": "@/components/utils"
-  }
+    "utils": "@/components/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/components/lib",
+    "hooks": "@/hooks"
+  },
+  "iconLibrary": "lucide"
 }
