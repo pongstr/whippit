@@ -1,5 +1,4 @@
 import '@/store'
-import '@/main.css'
 
 import { lazy, StrictMode, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
@@ -9,9 +8,9 @@ import { Route, Router, Switch } from 'wouter'
 import { Toaster } from '@/components/ui/sonner'
 import { UpdateContent } from '@/components/update-content'
 
+import '@/main.css'
+
 const HomePage = lazy(() => import('@/pages/HomePage'))
-const DocsPage = lazy(() => import('@/pages/DocsPage'))
-const ExamplesPage = lazy(() => import('@/pages/Examples'))
 
 if ('serviceWorker' in navigator) {
   registerSW()
@@ -22,8 +21,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Suspense>
       <Router>
         <Switch>
-          <Route path="/examples" component={ExamplesPage} />
-          <Route path="/readme" component={DocsPage} />
           <Route path="/" component={HomePage} />
         </Switch>
       </Router>

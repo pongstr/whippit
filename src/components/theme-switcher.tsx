@@ -1,14 +1,9 @@
+import React, { FC } from 'react'
 import { observer, useSelector } from '@legendapp/state/react'
 import { Laptop2, Sun, SunMoon } from 'lucide-react'
-import React, { FC } from 'react'
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { cn } from '@/components/utils'
+import { cn } from '@/components/lib/utils'
+import * as Dropdown from '@/components/ui/dropdown-menu'
 import { settings$ } from '@/store'
 
 const ThemeIcon: FC<{ theme: App.Settings['theme'] }> = ({ theme }) => {
@@ -47,21 +42,21 @@ const ThemeSwitcher: React.FC = observer(() => {
 
   return (
     <div data-testid="theme-switch-container" data-theme={theme}>
-      <DropdownMenu>
-        <DropdownMenuTrigger
+      <Dropdown.DropdownMenu>
+        <Dropdown.DropdownMenuTrigger
           className="flex size-8 items-center justify-center rounded-full p-0 focus:bg-muted focus-visible:bg-muted active:bg-muted"
           data-testid="trigger"
           data-selected-theme={theme}
         >
           <ThemeIcon theme={theme} />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
+        </Dropdown.DropdownMenuTrigger>
+        <Dropdown.DropdownMenuContent
           className="space-y-1 rounded-2xl p-2"
           sideOffset={12}
           alignOffset={-6}
           align="end"
         >
-          <DropdownMenuItem
+          <Dropdown.DropdownMenuItem
             onSelect={() => setTheme('light')}
             data-testid="theme-button-light"
             data-theme="light"
@@ -71,8 +66,8 @@ const ThemeSwitcher: React.FC = observer(() => {
             )}
           >
             Light
-          </DropdownMenuItem>
-          <DropdownMenuItem
+          </Dropdown.DropdownMenuItem>
+          <Dropdown.DropdownMenuItem
             data-testid="theme-button-dark"
             data-theme="dark"
             onClick={() => setTheme('dark')}
@@ -82,8 +77,8 @@ const ThemeSwitcher: React.FC = observer(() => {
             )}
           >
             Dark
-          </DropdownMenuItem>
-          <DropdownMenuItem
+          </Dropdown.DropdownMenuItem>
+          <Dropdown.DropdownMenuItem
             onSelect={() => setTheme('system')}
             data-testid="theme-button-system"
             data-theme="system"
@@ -93,9 +88,9 @@ const ThemeSwitcher: React.FC = observer(() => {
             )}
           >
             System
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+          </Dropdown.DropdownMenuItem>
+        </Dropdown.DropdownMenuContent>
+      </Dropdown.DropdownMenu>
     </div>
   )
 })

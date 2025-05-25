@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from 'motion/react'
 import { FC, useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'motion/react'
 
 import { Button } from '@/components/ui/button'
 
