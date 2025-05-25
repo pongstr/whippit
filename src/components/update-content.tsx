@@ -1,11 +1,11 @@
-import { ExternalLink, Wifi, WifiOff } from 'lucide-react'
 import React, { useCallback, useEffect } from 'react'
+import { ExternalLink, Wifi, WifiOff } from 'lucide-react'
 import { toast } from 'sonner'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 
+import { cn } from '@/components/lib/utils'
 import { Button } from '@/components/ui/button'
 import { buttonVariants } from '@/components/ui/button-variants'
-import { cn } from '@/components/utils'
 
 const ChangeLog: React.FC<{ reload: () => void }> = ({ reload }) => {
   return (

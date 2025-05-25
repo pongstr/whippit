@@ -1,8 +1,8 @@
-import { RefreshCcw } from 'lucide-react'
 import React from 'react'
+import { RefreshCcw } from 'lucide-react'
 
+import { cn } from '@/components/lib/utils'
 import { Transition } from '@/components/transition'
-import { cn } from '@/components/utils'
 
 export const Spinner: React.FC<{ className?: string }> = ({
   className = '',

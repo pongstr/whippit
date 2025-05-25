@@ -1,5 +1,5 @@
-import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import React from 'react'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { Link } from 'wouter'
 
 import ThemeSwitcher from '@/components/theme-switcher'
@@ -15,8 +15,8 @@ const Pongstr: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50  w-full items-center bg-background backdrop-blur-lg">
-      <div className="flex justify-between p-4 md:container">
+    <header className="sticky top-0 z-50w-full items-center bg-background backdrop-blur-lg">
+      <div className="flex justify-between p-4 md:max-w-6xl mx-auto">
         <div className="flex items-center justify-start">
           <Pongstr style={{ width: 26, height: 26 }} />
           <h1 className="indent-2 text-2xl font-extrabold tracking-tighter">

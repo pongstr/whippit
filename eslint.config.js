@@ -5,7 +5,6 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import storybook from 'eslint-plugin-storybook'
-import tailwind from 'eslint-plugin-tailwindcss'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
@@ -24,7 +23,6 @@ export default tseslint.config(
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      ...tailwind.configs['flat/recommended'],
       eslintConfigPrettier,
     ],
     languageOptions: {
@@ -34,7 +32,6 @@ export default tseslint.config(
     plugins: {
       react,
       storybook,
-      tailwind,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'simple-import-sort': simpleImportSort,
@@ -57,22 +54,23 @@ export default tseslint.config(
           ignoreRestSiblings: true,
         },
       ],
-      'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
-      'sort-imports': [
+      'simple-import-sort/imports': [
         'error',
         {
-          ignoreCase: true,
-          ignoreDeclarationSort: true,
-          ignoreMemberSort: true,
-          memberSyntaxSortOrder: ['all', 'single', 'multiple', 'none'],
-          allowSeparatedGroups: true,
+          groups: [
+            ['^\\u0000'],
+            ['^react', '^@?\\w'],
+            ['^(@|components)(/.*|$)'],
+            ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+            ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+            ['^.+\\.?(css)$'],
+          ],
         },
       ],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
       'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
-      'tailwindcss/no-custom-classname': 'off',
     },
     settings: {
       react: {
