@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.9.0
+
+### Minor Changes
+
+- dfe036a: chore(upgrade): tailwindcss v4, import-sort
+
 ## 1.8.1
 
 ### Patch Changes
