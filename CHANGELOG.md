@@ -1,5 +1,11 @@
 # @pongstr/whippit
 
+## 1.9.1
+
+### Patch Changes
+
+- 04b57be: chore(deps): updates pnpm+react
+
 ## 1.9.0
 
 ### Minor Changes
